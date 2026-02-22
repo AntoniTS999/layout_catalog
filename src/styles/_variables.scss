@@ -32,6 +32,7 @@ $color-primary: #00acdc;
 $color-text: #060b35;
 $color-secondary: #616070;
 $color-white: #fff;
+$color-title-hover: #34568b;
 
 // Fonts
 $font-family-base: 'Roboto', sans-serif;
@@ -50,3 +51,16 @@ $btn-radius: $border-radius;
 $star-size: 16px;
 $stars-width: $card-content-width;
 $stars-spacing: 4px;
+$stars-margin-bottom: 24px;
+$stars-text-width: 53px;
+
+// Catalog_spacing
+
+$card-gap-x: 48px;
+$card-gap-y: 46px;
+$catalog-padding-vertical: 50px;
+$catalog-padding-horizontal: 40px;
+
+// Transitions
+
+$transition-duration: 300ms;

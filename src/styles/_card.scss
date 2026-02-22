@@ -1,9 +1,9 @@
 @use './variables' as *;
 
 .catalog {
-  padding: 50px 40px;
+  padding: $catalog-padding-vertical $catalog-padding-horizontal;
   display: grid;
-  gap: 46px 48px;
+  gap: $card-gap-y $card-gap-x;
   justify-content: center;
   place-items: center;
 
@@ -37,17 +37,14 @@
   padding-bottom: 16px;
   justify-content: center;
 
-  transition: transform 300ms;
+  transition: transform $transition-duration;
 
   &:hover {
     transform: scale(1.2);
     z-index: 2;
   }
-  &.card__product--text:hover {
-    color: #34568b;
-  }
 
-  &__image--one {
+  &__image-img--one {
     width: $card-image-width;
     height: $card-image-height;
     margin-left: $card-image-margin;
@@ -55,22 +52,25 @@
     margin-bottom: 40px;
     display: flex;
   }
+  &__title {
+    color: $color-text;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    margin-bottom: 4px;
+    margin-top: 0;
+
+    transition: color $transition-duration;
+  }
+
+  &__title:hover {
+    color: $color-title-hover;
+  }
 
   &__product {
     display: flex;
     height: auto;
     width: $card-content-width;
     flex-direction: column;
-
-    &--text {
-      color: $color-text;
-      font-size: $font-size-medium;
-      line-height: $line-height-medium;
-      margin-bottom: 4px;
-      margin-top: 0;
-
-      transition: transform 300ms;
-    }
 
     &--code {
       color: $color-secondary;
@@ -113,7 +113,9 @@
     align-items: center;
     box-sizing: border-box;
 
-    transition: background-color 300ms;
+    transition:
+      background-color $transition-duration,
+      color $transition-duration;
 
     &--buy {
       background-color: $color-primary;

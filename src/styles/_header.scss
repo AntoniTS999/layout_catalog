@@ -52,7 +52,7 @@
     text-decoration: none;
     color: $nav-link-text-color;
     font-size: $nav-link-font-size;
-
+    transition: color $transition-duration ease;
     &:hover {
       color: $color-header;
     }

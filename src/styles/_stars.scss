@@ -6,7 +6,7 @@
   align-items: center;
   width: $stars-width;
   height: $star-size;
-  margin-bottom: 24px;
+  margin-bottom: $stars-margin-bottom;
   box-sizing: border-box;
 
   &__star {
@@ -30,7 +30,7 @@
   }
 
   &__text {
-    width: 53px;
+    width: $stars-text-width;
     color: $color-text;
     font-size: $font-size-small;
     font-weight: 400;
