@@ -8,19 +8,19 @@
   place-items: center;
 
   @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 200px);
+    grid-template-columns: repeat(1, $card-width);
   }
 
   @media (min-width: 488px) and (max-width: 766px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $card-width);
   }
 }
 
@@ -38,11 +38,6 @@
   justify-content: center;
 
   transition: transform $transition-duration;
-
-  &:hover {
-    transform: scale(1.2);
-    z-index: 2;
-  }
 
   &__image-img--one {
     width: $card-image-width;
@@ -62,26 +57,21 @@
     transition: color $transition-duration;
   }
 
-  &__title:hover {
-    color: $color-title-hover;
+  &__code {
+    color: $color-secondary;
+    font-weight: 400;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    height: 14px;
+    width: 98px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
-
   &__product {
     display: flex;
     height: auto;
     width: $card-content-width;
     flex-direction: column;
-
-    &--code {
-      color: $color-secondary;
-      font-weight: 400;
-      font-size: $font-size-small;
-      line-height: $line-height-small;
-      height: 14px;
-      width: 98px;
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
   }
   &__price {
     display: flex;
@@ -135,6 +125,14 @@
       border: 1px solid $color-primary;
       background-color: #fff;
       color: $color-primary;
+    }
+  }
+  &:hover {
+    transform: scale(1.2);
+    z-index: 2;
+
+    & .card__title {
+      color: $color-title-hover;
     }
   }
 }
