@@ -131,7 +131,7 @@
     transform: scale(1.2);
     z-index: 2;
 
-    & .card__title {
+    .card__title {
       color: $color-title-hover;
     }
   }
