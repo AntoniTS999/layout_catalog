@@ -29,14 +29,12 @@
   flex-direction: column;
   align-items: center;
   width: $general_width;
-  height: $card-height;
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   box-sizing: border-box;
   justify-content: space-between;
-  padding: 32px 16px;
+  padding: 32px 16px 16px;
   transition: transform $transition-duration;
-
 
   &__image-img--one {
     width: $card-image-width;
